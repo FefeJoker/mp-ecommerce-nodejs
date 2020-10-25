@@ -22,6 +22,18 @@ app.get('/', function (req, res) {
     res.render('home');
 });
 
+app.get('/failure', function (req, res) {
+  res.render('failure');
+});
+
+app.get('/pending', function (req, res) {
+  res.render('pending');
+});
+
+app.get('/success', function (req, res) {
+  res.render('success', req.query);
+});
+
 app.get('/detail', function (req, res) {
     res.render('detail', req.query);
 });
@@ -56,9 +68,9 @@ app.post('/pagar', (req, res) => {
           }
         },
         back_urls: {
-          success: "https://www.tu-sitio/success",
-          failure: "http://www.tu-sitio/failure",
-          pending: "http://www.tu-sitio/pending"
+          success: "https://fefejoker-mp-ecommerce-nodejs.herokuapp.com//success",
+          failure: "https://fefejoker-mp-ecommerce-nodejs.herokuapp.com//failure",
+          pending: "https://fefejoker-mp-ecommerce-nodejs.herokuapp.com//pending"
         },
         auto_return: "approved",
         payment_methods: {
@@ -78,7 +90,7 @@ app.post('/pagar', (req, res) => {
         external_reference: req.body.orden
     };
 
-    let temp = mercadopago.preferences.create(preference).then((response) => {
+    mercadopago.preferences.create(preference).then((response) => {
       res.redirect(response.response.init_point)
     }).catch((error) => {
       console.log(error);
