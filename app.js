@@ -68,9 +68,9 @@ app.post('/pagar', (req, res) => {
           }
         },
         back_urls: {
-          success: "https://fefejoker-mp-ecommerce-nodejs.herokuapp.com//success",
-          failure: "https://fefejoker-mp-ecommerce-nodejs.herokuapp.com//failure",
-          pending: "https://fefejoker-mp-ecommerce-nodejs.herokuapp.com//pending"
+          success: "https://fefejoker-mp-ecommerce-nodejs.herokuapp.com/success",
+          failure: "https://fefejoker-mp-ecommerce-nodejs.herokuapp.com/failure",
+          pending: "https://fefejoker-mp-ecommerce-nodejs.herokuapp.com/pending"
         },
         auto_return: "approved",
         payment_methods: {
