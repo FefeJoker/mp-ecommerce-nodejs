@@ -38,6 +38,9 @@ app.get('/detail', function (req, res) {
     res.render('detail', req.query);
 });
 
+app.post('/notification', function (req, res) {
+});
+
 app.post('/pagar', (req, res) => {
     let preference = {
         items: [
@@ -86,7 +89,7 @@ app.post('/pagar', (req, res) => {
           ],
           installments: 6
         },
-        notification_url: "",
+        notification_url: "https://fefejoker-mp-ecommerce-nodejs.herokuapp.com/notification",
         external_reference: req.body.orden
     };
 
