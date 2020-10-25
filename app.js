@@ -76,7 +76,7 @@ app.post('/pagar', (req, res) => {
         payment_methods: {
           exclude_payment_methods: [
             {
-              id: "amex"
+              id: "visa"
             }
           ],
           exclude_payment_types: [
