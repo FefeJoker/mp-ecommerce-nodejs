@@ -74,12 +74,12 @@ app.post('/pagar', (req, res) => {
         },
         auto_return: "approved",
         payment_methods: {
-          exclude_payment_methods: [
+          excluded_payment_methods: [
             {
-              id: "visa"
+              id: "amex"
             }
           ],
-          exclude_payment_types: [
+          excluded_payment_types: [
             {
               id: "atm"
             }
