@@ -39,6 +39,8 @@ app.get('/detail', function (req, res) {
 });
 
 app.post('/notification', function (req, res) {
+  res.sendStatus(200);
+  console.log(req.body);
 });
 
 app.post('/pagar', (req, res) => {
