@@ -84,7 +84,16 @@
                                     {{ unit }}
                                 </h3>
                             </div>
-                            <button type="submit" class="mercadopago-button" formmethod="post">Pagar</button>
+                            <form action="/pagar">
+                                <input type="hidden" name="id" value="1234">
+                                <input type="hidden" name="nombre" value="{{title}}">
+                                <input type="hidden" name="descripcion" value="Dispositivo móvil de Tienda e-commerce">
+                                <input type="hidden" name="imagen" value="{{img}}">
+                                <input type="hidden" name="cantidad" value="1">
+                                <input type="hidden" name="precio" value="{{price}}">
+                                <input type="hidden" name="orden" value="FefeJoker.28@gmail.com">
+                                <button type="submit" class="mercadopago-button" formmethod="post">Pagar la compra</button>
+                            </form>
                         </div>
                     </div>
                 </div>
