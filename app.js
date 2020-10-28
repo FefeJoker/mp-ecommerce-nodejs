@@ -19,7 +19,7 @@ app.use(parser.json());
 app.use(parser.urlencoded({ extended: true }))
 
 app.get('/', function (req, res) {
-    res.render('home');
+  res.render('home');
 });
 
 app.get('/failure', function (req, res) {
@@ -35,7 +35,7 @@ app.get('/success', function (req, res) {
 });
 
 app.get('/detail', function (req, res) {
-    res.render('detail', req.query);
+  res.render('detail', req.query);
 });
 
 app.post('/notification', function (req, res) {
@@ -49,7 +49,7 @@ app.post('/pagar', (req, res) => {
           {
             id: req.body.id,
             title: req.body.nombre,
-            description: req.body.description,
+            description: req.body.descripcion,
             img: path.join(__dirname, req.body.imagen),
             unit_price: Number(req.body.precio),
             quantity: 1,
